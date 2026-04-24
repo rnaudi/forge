@@ -7,6 +7,8 @@ Use this directory for commands and tool-specific behavior such as:
 
 - version-control commands
 - issue-tracker commands
+- bootstrap commands
+- CI and release commands
 - local automation commands
 - project-specific workflow substitutions
 
@@ -14,6 +16,8 @@ Keep durable process rules in `docs/process/`. Keep concrete commands here.
 
 ## Default Adapter
 
+- [bootstrap.md](bootstrap.md): expected project bootstrap contract
+- [ci.md](ci.md): green-main, tidy, and low-noise automation guidance
 - [jj-bd.md](jj-bd.md): Jujutsu for version control and `bd` for local
   issue tracking
 

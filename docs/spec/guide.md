@@ -23,12 +23,14 @@ implementation plans.
 ## What Belongs Here
 
 - overview and scope
+- standard condition, current condition, and gap
 - domain model
 - feature behavior
 - external interfaces
 - invariants and rules
 - error cases
 - acceptance criteria
+- follow-up measurement
 - user, customer, or operator impact
 
 ## Suggested Structure

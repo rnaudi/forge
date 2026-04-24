@@ -56,6 +56,14 @@ The implementation of `tidy` depends on the stack.
 
 ## Testing Strategy
 
+Default philosophy:
+
+- tests should buy confidence in behavior, not decorate coverage numbers
+- prefer integration tests around meaningful behavior when practical
+- use unit tests for tricky logic, edge cases, and fast feedback
+- avoid testing implementation details that should be free to change
+- keep one fast verification path for everyday work
+
 Fill in:
 
 - unit test conventions
@@ -64,6 +72,18 @@ Fill in:
 - fixture or test data rules
 - what every change must verify before commit
 - fast vs slow test split
+
+## Dependencies
+
+Fill in:
+
+- dependency manager and lockfile policy
+- single source of truth for versions
+- rules for adding a dependency
+- rules for updating dependencies
+- vulnerability scanning or audit commands
+- how transitive dependencies are reviewed
+- project-specific verification required before upgrades ship
 
 ## Coding Conventions
 
@@ -74,6 +94,7 @@ Fill in:
 - naming conventions
 - package or module conventions
 - error handling conventions
+- searchability and naming rules that matter for this project
 
 ## Environment
 
@@ -83,6 +104,16 @@ Document:
 - local services
 - secrets handling for development
 - database or queue setup
+
+## Bootstrap
+
+Document:
+
+- setup command
+- required tools
+- generated local files
+- required credentials and where to request them
+- verification command after bootstrap
 
 ## Troubleshooting
 

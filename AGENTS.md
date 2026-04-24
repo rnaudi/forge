@@ -21,6 +21,7 @@ This repo exists to hold:
 - a start-of-session contract for agents
 - reusable process docs
 - workflow adapters for concrete tools
+- repo-native operating context for humans and agents
 - project document templates
 - spec and design doc templates
 
@@ -47,7 +48,12 @@ Task-specific docs:
 - implementation work: `docs/process/implementation.md`
 - review work: `docs/process/code-review.md`
 - commit work: `docs/process/committing.md`
+- operability work: `docs/process/operability.md`
+- stewardship or triage work: `docs/process/stewardship.md`
 - tool or workflow setup: `workflows/README.md`
+- bootstrap setup: `workflows/bootstrap.md`
+- CI or automation setup: `workflows/ci.md`
+- security, secrets, or protected data: `docs/security.md`
 
 Do not read the whole repo by default.
 
@@ -60,6 +66,7 @@ Do not read the whole repo by default.
 5. Put high-level project operating context in `docs/development.md`.
 6. Put system shape in `docs/architecture.md`.
 7. Put concrete tool commands in `workflows/`.
+8. Put lightweight project status surfaces in `devhub/`.
 
 ## Document Taxonomy
 
@@ -70,6 +77,8 @@ Do not read the whole repo by default.
 - `docs/process/` is for workflow rules used while shaping and changing the project
 - `docs/notes/` is for low-friction notes that are not yet curated docs
 - `workflows/` is for concrete tool adapters such as version control and issue tracking
+- `devhub/` is for project status pages generated or maintained from repo data
+- `docs/security.md` is for secrets, protected data, and access-boundary rules
 
 ## Canonical Lifecycle
 

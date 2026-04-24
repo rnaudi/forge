@@ -1,14 +1,20 @@
 # forge
 
-`forge` is a documentation-first bootstrap for collaborative software projects.
+`forge` is a repo-native operating context for software projects built by
+humans and agents.
+
+The goal is simple: after `git clone`, the repository should contain the
+project's durable memory and enough operating context to make the next change
+without archaeology in chat, Jira, Confluence, Google Docs, or someone's head.
 
 It works best when a project wants:
 
 - source-controlled specs
-- source-controlled technical design records
+- source-controlled technical design docs
 - explicit process around planning, implementation, review, and commit
 - durable written context for humans and agents
-- less reliance on tribal memory and ephemeral chat context
+- local-first issue and workflow state
+- minimal dependence on external project-management surfaces
 
 This is especially useful for:
 
@@ -18,15 +24,23 @@ This is especially useful for:
 - teams that want more spec-driven or design-driven development
 - projects where behavior, decisions, and process should live in version control
 
-The goal is simple: make the repository itself the shared operating context.
-
 That means:
 
 - `docs/spec/` holds behavior, scope, and contract docs
-- `docs/designs/` holds technical decisions and phased implementation records
+- `docs/designs/` holds technical decisions and implementation plans
 - `docs/process/` holds workflow guidance
 - `workflows/` holds concrete tool adapters
+- `devhub/` holds a lightweight project status surface when the project needs one
 - top-level docs hold stable project-wide context
+
+## Operating Biases
+
+- Keep product intent, design history, workflow, and contributor commands in the repo.
+- Prefer small executable slices over documentation theater.
+- Prefer local-first, version-controlled state over external coordination systems.
+- Prefer minimal dependencies and explicit operational ownership.
+- Make the project understandable to a fresh human or agent from repository
+  context alone.
 
 ## Agent Entry Point
 

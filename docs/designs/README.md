@@ -8,8 +8,11 @@ are clear enough to choose an implementation direction.
 ## What a Design Doc Captures
 
 - context
+- mental model and invariants
 - the decision
 - goals and non-goals
+- operability and observability
+- stability and compatibility
 - alternatives considered
 - implementation plan or phases
 - consequences and tradeoffs
@@ -48,11 +51,15 @@ cp docs/designs/0000-template.md docs/designs/NNNN-<title>.md
 
 - Summary
 - Context
+- Mental Model
 - Goals / Non-goals
 - Decision
+- Operability and Observability
+- Stability and Compatibility
 - Alternatives Considered
 - Implementation Plan
 - Consequences
+- Design Drift
 
 4. After approval, create tracking with the selected workflow adapter when the
    project uses tracking.
