@@ -12,13 +12,12 @@ Before committing:
 
 ## Version Control
 
-This template defaults to **Jujutsu (`jj`)**.
+Use the version-control tool chosen by the project.
 
-Key differences from git:
-
-- the working copy is always a commit
-- there is no staging area
-- use `jj` commands to inspect and finalize work
+The default adapter for this template is `../../workflows/jj-bd.md`, but the
+commit process should remain the same with Git, Jujutsu, or another VCS:
+inspect the diff, verify it is coherent, write a clear message, and leave the
+main branch releasable.
 
 ## Commit Message Guidelines
 
@@ -44,7 +43,7 @@ Body:
 
 Footer:
 
-- reference `bd` issues when useful
+- reference tracking items when useful
 
 Examples:
 
@@ -55,34 +54,26 @@ Add design template for large changes
 ```text
 Refine implementation workflow
 
-Clarify how approved plans become bd issues and how large work
-updates ADR phase checklists.
+Clarify how approved plans become tracked work and how large changes
+stay aligned with design docs.
 
-Related to bd-42
+Related to <tracking-id>
 ```
 
 ## Workflow
 
-### 1. Close Related Issues
+### 1. Close Related Tracking
 
-If the project uses `bd` and the commit completes an issue:
-
-```bash
-bd close <bd-id> --reason "Completed"
-```
+If the commit completes tracked work, close or update the tracking item using
+the selected workflow adapter.
 
 ### 2. Create the Commit
 
-```bash
-jj commit -m "<message>"
-```
+Use the selected VCS workflow to create a focused commit.
 
 ### 3. Verify
 
-```bash
-jj log -r @-
-jj status
-```
+Inspect the resulting commit and working-copy status with the selected VCS.
 
 ## Commit Quality
 

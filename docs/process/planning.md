@@ -29,7 +29,7 @@ Before planning, make sure you understand:
 1. What problem is being solved?
 2. What outcome is desired?
 3. What already exists in the repo or docs?
-4. Is there related ready work in `bd`?
+4. Is there related ready work in the project's tracker?
 5. Is this primarily a product/behavior question, a technical implementation
    question, or both?
 
@@ -44,12 +44,12 @@ Characteristics:
 - touches a small number of files
 - one concept or bounded change
 - can fit in one focused session
-- no ADR required
+- no design doc required
 
 Output:
 
 - short implementation plan
-- one `bd` issue after approval
+- one tracking item after approval, when the project uses tracking
 
 ### Large Work
 
@@ -64,9 +64,9 @@ Output:
 
 - spec in `docs/spec/` when product behavior, scope, or user
   impact must be made explicit
-- ADR in `docs/designs/NNNN-<title>.md` when technical approach or
+- design doc in `docs/designs/NNNN-<title>.md` when technical approach or
   implementation tradeoffs must be chosen
-- `bd` epic plus subtasks after approval
+- tracking parent plus subtasks after approval, when the project uses tracking
 
 ## Step 3: Create the Plan
 
@@ -79,11 +79,8 @@ Create a brief plan that states:
 - tests or validation needed
 - risks or unknowns
 
-After approval:
-
-```bash
-bd create "<title>" -t feature -p 2 --json
-```
+After approval, create one tracking item if the project uses a tracker. Use the
+selected adapter in `../../workflows/`.
 
 ### For Large Work
 
@@ -91,10 +88,10 @@ bd create "<title>" -t feature -p 2 --json
 
 - **Spec only** when the core problem is product behavior, user-facing flow,
   workflow definition, or contract definition
-- **ADR only** when the problem is mainly technical and the product behavior is
-  already clear
-- **Spec + ADR** when product intent and technical approach both need explicit
-  treatment
+- **Design doc only** when the problem is mainly technical and the product
+  behavior is already clear
+- **Spec + design doc** when product intent and technical approach both need
+  explicit treatment
 
 2. If a spec is needed, start from the templates in `docs/spec/`.
 
@@ -107,37 +104,32 @@ The spec should cover:
 - open questions
 - acceptance criteria or stable behavioral expectations
 
-3. If an ADR is needed, copy the ADR template:
+3. If a design doc is needed, copy the design template:
 
 ```bash
 cp docs/designs/0000-template.md docs/designs/NNNN-<title>.md
 ```
 
-4. Fill in the key ADR sections:
+4. Fill in the key design sections:
 
 - Summary
 - Context
 - Goals / Non-goals
 - Decision
 - Alternatives Considered
-- Implementation Phases
+- Implementation Plan
 - Consequences
 
 5. Present the draft and wait for approval.
 
-6. After approval, create tracking:
+6. After approval, create tracking with one parent and one item per approved
+   phase if the project uses a tracker.
 
-```bash
-bd create "<title>" -t epic -p 2 --json
-bd create "Phase 1: <desc>" -t task --parent <epic-id> --json
-bd create "Phase 2: <desc>" -t task --parent <epic-id> --json
-```
-
-7. Update the ADR with issue IDs.
+7. Link the tracking items from the spec or design doc only when useful.
 
 ## Step 4: Get Approval
 
-Do not create `bd` tracking until the user approves the plan, spec, or ADR.
+Do not create tracking until the user approves the plan, spec, or design doc.
 
 That keeps exploration cheap and avoids cluttering the tracker with abandoned
 ideas.
@@ -146,12 +138,12 @@ ideas.
 
 | Work Size | Artifacts |
 |-----------|-----------|
-| Small | brief plan + one `bd` issue |
-| Large | spec and/or ADR + `bd` epic + subtasks |
+| Small | brief plan + optional tracking item |
+| Large | spec and/or design doc + optional tracking parent and subtasks |
 
 ## Next Step
 
 Once approved:
 
-- small work: implement the single approved issue
+- small work: implement the single approved item
 - large work: implement the first approved phase or subtask

@@ -72,5 +72,5 @@ Capture relevant constraints such as:
 
 ## References
 
-- related ADRs in `docs/designs/`
+- related design docs in `docs/designs/`
 - related architecture or process docs

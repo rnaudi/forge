@@ -16,10 +16,12 @@ Use it for two things:
 ## Structured Project Docs
 
 - [spec/README.md](spec/README.md): stable behavior and contract docs
-- [designs/README.md](designs/README.md): technical design docs / ADRs
+- [designs/README.md](designs/README.md): technical design docs
 - [process/README.md](process/README.md): workflow guidance and bootstrap path
 - [notes/README.md](notes/README.md): append-only topical notes, discoveries,
   and operational breadcrumbs
+- [../workflows/README.md](../workflows/README.md): concrete tool adapters for
+  version control, tracking, and local workflow commands
 
 ## Rule of Thumb
 
@@ -28,5 +30,6 @@ Use it for two things:
 - use `architecture.md` for the system shape as a whole
 - use `development.md` for concrete contributor commands and environment rules
 - use `process/` for the workflow around planning, implementation, review, and commit
+- use `workflows/` for tool-specific commands that implement the process
 - use `notes/` when writing something quickly is better than not writing it at
   all

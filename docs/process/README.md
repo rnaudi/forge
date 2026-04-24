@@ -2,6 +2,9 @@
 
 This directory documents the operating process for `forge`.
 
+These docs should stay tool-neutral. Concrete commands belong in
+`../../workflows/`.
+
 ## Overview
 
 The default workflow is:
@@ -25,7 +28,8 @@ If the repo is already specialized or the task is ordinary project work:
 | Implement approved work | [implementation.md](implementation.md) |
 | Review a change | [code-review.md](code-review.md) |
 | Prepare a commit | [committing.md](committing.md) |
-| Use or replace default local tracking | [issue-tracking.md](issue-tracking.md) |
+| Use or replace concrete tools | [../../workflows/README.md](../../workflows/README.md) |
+| Decide tracking behavior | [issue-tracking.md](issue-tracking.md) |
 
 ## Work Types
 
@@ -33,12 +37,12 @@ If the repo is already specialized or the task is ordinary project work:
 
 - 1-3 files or one bounded change
 - one focused session
-- no ADR needed
+- no design doc needed
 
 Workflow:
 
 ```
-understand -> plan -> approve -> bd issue -> implement -> review -> commit
+understand -> plan -> approve -> optional tracking -> implement -> review -> commit
 ```
 
 ### Large Work
@@ -50,7 +54,7 @@ understand -> plan -> approve -> bd issue -> implement -> review -> commit
 Workflow:
 
 ```
-understand -> plan/design -> approve -> spec and/or ADR + bd epic/subtasks -> implement -> review -> commit
+understand -> plan/design -> approve -> spec and/or design doc + tracking -> implement -> review -> commit
 ```
 
 ## Principles
@@ -58,8 +62,8 @@ understand -> plan/design -> approve -> spec and/or ADR + bd epic/subtasks -> im
 - approval before formal tracking
 - `docs/spec/` is for stable behavior and contracts
 - `docs/designs/` is for technical decisions and phases
-- ADRs for large technical work only
-- `jj` and `bd` are defaults, not universal requirements
+- design docs for large technical work only
+- tool defaults live in `../../workflows/`
 - spec updates when behavior, scope, or product intent needs a stable written contract
 - main should stay releasable
 - CI should be thin and build-system-first

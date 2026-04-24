@@ -1,6 +1,6 @@
 ---
 id: 0000
-title: ADR Title
+title: Design Title
 status: proposal
 tags: []
 created: YYYY-MM-DD
@@ -9,7 +9,7 @@ implemented:
 superseded-by:
 ---
 
-# ADR-0000: Title
+# Design 0000: Title
 
 ## Status
 
@@ -50,10 +50,10 @@ were selected.
 - benefits
 - drawbacks
 
-## Implementation Phases
+## Implementation Plan
 
-- [ ] **Phase 1: Name** - bd-XXX
-- [ ] **Phase 2: Name** - bd-XXX
+- **Phase 1: Name** - intended outcome
+- **Phase 2: Name** - intended outcome
 
 ## Consequences
 
@@ -71,8 +71,8 @@ were selected.
 
 ## Future Work
 
-Things explicitly out of scope for this ADR.
+Things explicitly out of scope for this design.
 
 ## References
 
-- Related docs, issues, or external references
+- Related docs, tracking items, or external references

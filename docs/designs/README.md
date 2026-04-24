@@ -1,30 +1,32 @@
-# Technical Design Docs and ADRs
+# Technical Design Docs
 
-This directory contains numbered technical design records for large changes.
+This directory contains numbered design docs for large technical changes.
 
-These documents are ADR-like: they capture technical decisions after the
-problem and product intent are clear enough to choose an implementation
-direction.
+Design docs capture the technical approach after the problem and product intent
+are clear enough to choose an implementation direction.
 
-## What an ADR Captures
+## What a Design Doc Captures
 
 - context
 - the decision
 - goals and non-goals
 - alternatives considered
-- implementation phases
+- implementation plan or phases
 - consequences and tradeoffs
 
 ## When to Write One
 
-Write an ADR for work that:
+Write a design doc for work that:
 
 - spans multiple sessions
 - has meaningful design choices
 - needs phased delivery
 - benefits from a durable historical record
 
-Do not write an ADR for small, obvious changes.
+Do not write a design doc for small, obvious changes.
+
+Design docs may describe intended phases, but they are not task trackers. Keep
+live status, checkboxes, ownership, and issue IDs in the project tracker.
 
 ## Lifecycle
 
@@ -32,7 +34,7 @@ Do not write an ADR for small, obvious changes.
 proposal -> accepted -> implemented -> superseded
 ```
 
-## Creating an ADR
+## Creating a Design Doc
 
 1. Copy the template:
 
@@ -49,13 +51,13 @@ cp docs/designs/0000-template.md docs/designs/NNNN-<title>.md
 - Goals / Non-goals
 - Decision
 - Alternatives Considered
-- Implementation Phases
+- Implementation Plan
 - Consequences
 
-4. After approval, create `bd` tracking and add issue IDs to the ADR.
+4. After approval, create tracking with the selected workflow adapter when the
+   project uses tracking.
 
 ## Relationship to Specs
 
-Use ADRs for technical design decisions. Use `docs/spec/` for functional-spec /
-RFD-style behavior and scope documents that should outlive the implementation
-details.
+Use design docs for technical decisions. Use `docs/spec/` for functional-spec /
+RFD-style behavior and scope documents that should evolve with the product.

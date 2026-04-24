@@ -6,7 +6,7 @@ and boundaries are known.
 This document is a stable project overview, not a replacement for:
 
 - `docs/spec/` behavior and contract docs
-- `docs/designs/` ADRs for specific technical decisions
+- `docs/designs/` design docs for specific technical decisions
 
 ## Overview
 
@@ -94,4 +94,4 @@ Describe:
 ## References
 
 - related specs in `docs/spec/`
-- related ADRs in `docs/designs/`
+- related design docs in `docs/designs/`

@@ -7,25 +7,16 @@ This document describes how to implement approved work.
 Before implementing:
 
 1. a plan exists
-2. large work has the required spec and/or ADR artifacts
+2. large work has the required spec and/or design doc artifacts
 3. the work is small enough for one session, or has been split
 
 ## Step 1: Load Context
 
-1. Get the issue details:
-
-```bash
-bd show <bd-id> --json
-```
-
-2. For large work, read the relevant spec in `docs/spec/` and the ADR in
+1. Read the tracking item if the project uses a tracker. Use the selected
+   workflow adapter in `../../workflows/`.
+2. For large work, read the relevant spec in `docs/spec/` and design doc in
    `docs/designs/` when present.
-
-3. Mark the issue as in progress:
-
-```bash
-bd update <bd-id> --status in_progress --json
-```
+3. Mark the tracking item as in progress when the project uses a tracker.
 
 ## Step 2: Scope Check
 
@@ -41,11 +32,7 @@ Split it when:
 - unrelated concerns are mixed together
 - too much discovery is still needed
 
-If needed, create subtasks:
-
-```bash
-bd create "Subtask: <description>" --parent <bd-id> -t task --json
-```
+If needed, create subtasks using the selected workflow adapter.
 
 ## Step 3: Recommended Order
 
@@ -56,7 +43,7 @@ bd create "Subtask: <description>" --parent <bd-id> -t task --json
 3. Add or update tests first when practical.
 4. Make code changes.
 5. Run the fastest relevant verification.
-6. For large work, update the ADR phase checklist.
+6. For large work, update tracking and any affected specs or design docs.
 
 ## Step 4: Verify
 
@@ -73,14 +60,11 @@ Examples:
 
 ## Step 5: Update Progress
 
-For large work, update the ADR checklist:
+Update the relevant tracking item when the project uses a tracker.
 
-```markdown
-## Implementation Phases
-
-- [x] **Phase 1: Name** - bd-42
-- [ ] **Phase 2: Name** - bd-43
-```
+Do not edit a design doc just to mark task progress. Edit it only when the
+design itself changed; for major direction changes, write a follow-up design
+doc that references the original.
 
 ## Step 6: Review and Commit
 
@@ -95,4 +79,4 @@ Before committing:
 - each commit should leave the repo in a coherent state
 - split oversized work instead of forcing it through one session
 - stable behavior changes should usually have spec documentation
-- major technical direction changes should usually have ADR documentation
+- major technical direction changes should usually have design documentation

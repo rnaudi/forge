@@ -1,25 +1,17 @@
-# Issue Tracking with bd
+# Issue Tracking
 
-This workflow uses [bd (beads)](https://github.com/steveyegge/beads) for local,
-version-controlled issue tracking.
+Use the tracker chosen by the project. Tracking can be local, hosted, or absent
+for very small projects.
 
-## Why bd
+The default template adapter uses `bd` and is documented in
+`../../workflows/jj-bd.md`.
 
-- local-first
-- dependency-aware
-- works well with agents
-- JSON output is scriptable
+## Why Track Work
 
-## Quick Reference
-
-```bash
-bd ready --json
-bd create "Title" -t feature -p 2 --json
-bd create "Subtask" --parent <epic-id> --json
-bd update <id> --status in_progress --json
-bd close <id> --reason "Completed" --json
-bd show <id> --json
-```
+- preserve intent across sessions
+- split large work into reviewable parts
+- make dependencies visible
+- give agents a stable handoff surface
 
 ## Lifecycle
 
@@ -29,24 +21,19 @@ open -> in_progress -> closed
 
 ## Workflow Rules
 
-1. Do not create issues before approval.
-2. Small work gets one issue.
-3. Large work gets one epic plus subtasks.
-4. Close issues before the commit that completes them when practical.
+1. Do not create tracking items before approval.
+2. Small work gets one tracking item.
+3. Large work gets one parent item plus subtasks.
+4. Close tracking items before the commit that completes them when practical.
 
 ## Epics and Subtasks
 
-For large work:
-
-```bash
-bd create "Large change" -t epic -p 2 --json
-bd create "Phase 1: <desc>" -t task --parent <epic-id> --json
-bd create "Phase 2: <desc>" -t task --parent <epic-id> --json
-```
+For large work, create one parent item plus one item per approved phase.
 
 ## Best Practices
 
-- use `--json` for automation
 - keep titles short and clear
-- put deep reasoning in ADRs, not issue text
-- commit `.beads/issues.jsonl` with related code or docs changes
+- put deep reasoning in specs or design docs, not tracker text
+- prefer machine-readable output when the tool supports it
+- commit local tracker files with related code or docs changes when the tracker
+  is version-controlled

@@ -10,6 +10,6 @@ Use it when:
 - future refactors should preserve a stable contract
 
 Do not force every change into a formal spec. Many changes only need a plan or
-ADR.
+design doc.
 
 For the fuller writing guidance, use [guide.md](guide.md).

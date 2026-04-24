@@ -20,61 +20,36 @@ If the repo is still generic, follow `docs/process/bootstrap.md` first.
 Keep this file short and concrete. If a section is not true for the project,
 replace or delete it.
 
-## Replace These Sections with Real Commands
+## Fill These Sections with Real Commands
 
 ### Build
 
 ```bash
-# Example placeholders. Replace with the actual build command.
-./gradlew build
-# or
-npm run build
-# or
-cargo build
+# TBD until the project chooses a build system.
 ```
 
 ### Test
 
 ```bash
-# Replace with the default verification command.
-./gradlew test
-# or
-npm test
-# or
-cargo test
+# TBD until the project chooses a test command.
 ```
 
 ### Fast Feedback Loop
 
 ```bash
-# Replace with the smallest useful local check.
-./gradlew test --tests "com.example.FastTestSuite"
-# or
-npm run test:unit
-# or
-cargo test -p crate_name
+# TBD until the project identifies the smallest useful local check.
 ```
 
 ### Run Locally
 
 ```bash
-# Replace with the local run command.
-./gradlew bootRun
-# or
-npm run dev
-# or
-cargo run
+# TBD until the project has a local run command.
 ```
 
 ### Tidy
 
 ```bash
-# Replace with project-specific mechanical checks.
-make tidy
-# or
-./gradlew tidy
-# or
-deno task tidy
+# TBD until the project chooses formatting, linting, or tidy commands.
 ```
 
 The implementation of `tidy` depends on the stack.
@@ -88,9 +63,7 @@ Fill in:
 - end-to-end test conventions
 - fixture or test data rules
 - what every change must verify before commit
-
 - fast vs slow test split
-- what every change must verify before commit
 
 ## Coding Conventions
 

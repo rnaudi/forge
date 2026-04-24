@@ -25,6 +25,7 @@ That means:
 - `docs/spec/` holds behavior, scope, and contract docs
 - `docs/designs/` holds technical decisions and phased implementation records
 - `docs/process/` holds workflow guidance
+- `workflows/` holds concrete tool adapters
 - top-level docs hold stable project-wide context
 
 ## Agent Entry Point
@@ -39,7 +40,8 @@ Otherwise continue with:
 
 1. `docs/README.md`
 2. `docs/process/README.md`
-3. the single task-specific process doc you need
+3. `workflows/README.md` if the task needs concrete tool commands
+4. the single task-specific process doc you need
 
-The repo aims to be neutral across agent interfaces, but it is opinionated
-about workflow defaults until a concrete project replaces them.
+The repo aims to be neutral across agent interfaces. Tool defaults live in
+`workflows/` so projects can replace them without rewriting the process docs.

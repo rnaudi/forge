@@ -27,7 +27,7 @@ self-review checklist.
 
 ### 2. Scope and Design Fit
 
-- does the implementation match the approved plan, spec, and ADR?
+- does the implementation match the approved plan, spec, and design doc?
 - did the change quietly expand scope?
 - is there a simpler way to get the same result?
 
@@ -52,8 +52,8 @@ self-review checklist.
 ### 6. Contract Fidelity
 
 - if there is a spec, does the implementation actually satisfy it?
-- did technical choices drift away from the ADR without being documented?
-- should a new ADR be written instead of silently changing direction?
+- did technical choices drift away from the design doc without being documented?
+- should a new design doc be written instead of silently changing direction?
 
 ### 7. Performance and Operational Risk
 
