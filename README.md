@@ -42,6 +42,11 @@ That means:
 - Make the project understandable to a fresh human or agent from repository
   context alone.
 
+## Example
+
+- [`forge-cli`](https://github.com/rnaudi/forge-cli): an example project using
+  this template as its repo-native operating context.
+
 ## Agent Entry Point
 
 Start at `AGENTS.md`.
